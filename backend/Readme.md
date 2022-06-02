@@ -53,3 +53,9 @@ AES lies in its key length options so the time required to crack an encryption a
 Luhn alogrithm use for the credit card validation.
 I use the luhn on the route level because if user bypas the form level validation or front end validation or in case of disable js on his browser or do something else so I decide to apply luhn alogrithm on backend side once credit card number verify then pass the request to the next handler.
 
+# Test card numbers
+Visa
+4716108999716531    
+Master Card
+5281037048916168
+
