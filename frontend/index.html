@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+     
+          <div class="payment">
+              <form>
+                  <div class="form-group owner" id="owner-field">
+                      <label for="owner">Owner</label>
+                      <input type="text" class="form-control" id="owner">
+                      <div id="owner-error" class="text-danger"></div>
+                  </div>
+                  <div class="form-group CVV" id="cvv-field">
+                      <label for="cvv">CVV</label>
+                      <input type="text" class="form-control" id="cvv" max="3">
+                      <div id="cvv-number-error" class="text-danger"></div>
+                  </div>
+                  <div class="form-group" id="card-number-field">
+                      <label for="cardNumber">Card Number</label>
+                      <input type="text" class="form-control" id="cardNumber" placeholder="1111222233334444" >
+                      <div id="card-number-error" class="text-danger"></div>
+                  </div>
+                  <div class="form-group" id="expiration-date-field">
+                    <label for="expiration-date">Expiration Date</label>
+                    <input type="date" class="form-control" id="expiration-date" min="2022-06-02">
+                    <div id="date-error" class="text-danger"></div>
+                </div>
+                      
+                  <div class="form-group" id="pay-now">
+                      <button type="submit" class="btn btn-primary" id="confirm-purchase">Submit</button>
+                  </div>
+              </form>
+                
+                <!-- Visa
+                4716108999716531    
+                Master Card
+                5281037048916168
+                -->
+      </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./script.js" ></script>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDate").min;
+    }
+    </script>
+
+</body>
+</html>

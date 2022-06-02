@@ -1,0 +1,67 @@
+Q. 1
+for (var i = 0; i < 100; i++) {
+setTimeout(function() {
+console.log(i);
+}, 200);
+}
+
+Ans.
+It print 100 time 100 becuse the variable i is actually declared within the for loop and the inner function accesses it. 
+So when the for loop is done running, each of the inner functions refers to the same variable i,
+ which at the end of the loop is equal to 100.
+
+2) What is the result of this code in the console
+(async function() {
+function waitForMe() {
+return new Promise(function(resolve, reject) {
+setTimeout(function() {
+resolve("hello");
+}, 200);
+});
+}
+const result = await waitForMe();
+console.log(result);
+})();
+
+Ans.
+The ouput is 'hello' because waitForMe is aysnc await function it wait util resolve or reject.
+
+3) Explain the difference
+Explain the difference between those:
+var a;
+let b;
+const c;.
+
+Ans
+var: 
+The scope of a var variable is functional (global) scope.
+It can be declared without initialization.
+It can be accessed without initialization as its default value is undefined.
+
+let: 
+The scope of a let variable is block scope.
+It can be updated but cannot be re-declared into the scope.
+It cannot be accessed without initialization as it returns an error.
+
+const: 
+The scope of a const variable is block scope.
+It cannot be updated or re-declared into the scope.
+It cannot be declared without initialization.
+It cannot be accessed without initialization as it cannot be declared without initialization.
+
+4) What is the result of this code in the console
+
+We got a module "test.js":
+var arr = [];
+module.exports = arr;
+We got a module using it:
+var test = require("./test");
+test.push("hello");
+console.log(JSON.stringify(test));
+
+We got another module using it later:
+var test = require("./test");
+test.push("another");
+console.log(JSON.stringify(test));
+
+The Output is ["hello", "another"] because var is global.
